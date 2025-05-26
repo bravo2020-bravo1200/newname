@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+ <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+    
+<body>
+   <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+
+    {% for x in mystaff_members %}
+    <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+        <td>{{ x.phone }}</td>
+        <td>{{ x.joined_date }}</td>
+        <h1>{{ x }}</h1>
+    </tr> 
+    {% endfor %}
+        <p>In views.py you can see how to import and fetch Staff_members from the database.</p>
+    
+        
+</body>
+</html>
+    
